@@ -50,6 +50,66 @@
 </code></pre>
 
 <h2>
+<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+
+<p>This API can currently retrieve the following data from <a href="http://coinmarketcap.com/">coinmarketcap</a>:</p>
+
+<ul>
+<li>Rank:</li>
+</ul><pre><code>&gt;&gt;&gt; import coinmarketcap
+&gt;&gt;&gt; coinmarketcap.rank('btc')
+1
+</code></pre>
+
+<ul>
+<li>Name:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.name('btc')
+Bitcoin
+</code></pre>
+
+<ul>
+<li>Market capitalization (last 24h):</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.market_cap('btc')
+$ 7,768,506,597
+</code></pre>
+
+<ul>
+<li>Price:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.price('btc')
+$ 600.77
+</code></pre>
+
+<ul>
+<li>Total coins:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.total_coins('btc')
+12,930,825 BTC
+</code></pre>
+
+<ul>
+<li>Market Volume:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.market_volume('btc')
+$ 10,744,269
+</code></pre>
+
+<ul>
+<li>Market capitalization change (last 24h):</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.market_cap_change('btc')
++0.79 %
+</code></pre>
+
+<ul>
+<li>Last update:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.last_updated()
+Last updated: Jun 22, 2014  3:45 PM UTC
+</code></pre>
+
+<ul>
+<li>Total market capitalization:</li>
+</ul><pre><code>&gt;&gt;&gt; coinmarketcap.total_market_cap()
+Total Market Cap: $ 8,408,262,217
+</code></pre>
+
+<h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
 
 <pre><code>  Apache v2.0 License
