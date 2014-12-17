@@ -29,7 +29,7 @@
       </header>
       <section>
         <h1>
-<a name="coinmarketcap-api" class="anchor" href="#coinmarketcap-api"><span class="octicon octicon-link"></span></a>
+<a id="coinmarketcap-api" class="anchor" href="#coinmarketcap-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>
 <img src="https://raw.githubusercontent.com/c0ding/coinmarketcap-api/master/doc/coinmarketcap.png" height="85" alt="coinmarketcap" title="coinmarketcap">coinmarketcap-api</h1>
 
 <p><a href="https://pypi.python.org/pypi/coinmarketcap/"><img src="http://img.shields.io/pypi/v/coinmarketcap.svg" alt="PyPi Version"></a>   <a href="https://pypi.python.org/pypi/coinmarketcap/"><img src="http://img.shields.io/pypi/dm/coinmarketcap.svg" alt="Downloads"></a></p>
@@ -37,7 +37,7 @@
 <p><strong>coinmarketcap</strong> is an APACHE licensed library written in Python designed to provide a simple to use API for <a href="http://coinmarketcap.com/">coinmarketcap</a>. As coinmarketcap does not provide any API endpoints, this code is pretty dirty.</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation:</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation:</h2>
 
 <p>From source use</p>
 
@@ -50,86 +50,120 @@
 </code></pre>
 
 <h2>
-<a name="api-documentation" class="anchor" href="#api-documentation"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
+<a id="api-documentation" class="anchor" href="#api-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Documentation:</h2>
 
 <p>This API can currently retrieve the following data from <a href="http://coinmarketcap.com/">coinmarketcap</a>:</p>
 
 <ul>
 <li>Rank:</li>
-</ul><pre><code>&gt;&gt;&gt; import coinmarketcap
+</ul>
+
+<pre><code>&gt;&gt;&gt; import coinmarketcap
 &gt;&gt;&gt; coinmarketcap.rank('bitcoin')
 1
 </code></pre>
 
 <ul>
 <li>Name:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.name('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.name('bitcoin')
 Bitcoin
 </code></pre>
 
 <ul>
 <li>Symbol:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.short('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.short('bitcoin')
 BTC
 </code></pre>
 
 <ul>
 <li>Market capitalization (last 24h):</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.market_cap('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.market_cap('bitcoin')
 $ 7,644,402,276
 </code></pre>
 
 <ul>
 <li>Price:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.price('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.price('bitcoin')
 $ 583.77
 </code></pre>
 
 <ul>
 <li>Total coins:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.coin_supply('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.coin_supply('bitcoin')
 13,094,775
 </code></pre>
 
 <ul>
 <li>Market Volume:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.market_volume('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.market_volume('bitcoin')
 $ 8,122,070
 </code></pre>
 
 <ul>
 <li>Market capitalization change (1 hour):</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_1h('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_1h('bitcoin')
 0.17 %
 </code></pre>
 
 <ul>
 <li>Market capitalization change (24 hours):</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_24h('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_24h('bitcoin')
 -1.07 %
 </code></pre>
 
 <ul>
 <li>Market capitalization change (7 days):</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_7d('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.cap_change_7d('bitcoin')
 -2.10 %
 </code></pre>
 
 <ul>
+<li>List top 'n' currencies (by market capitalization):</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.top('10')
+['Bitcoin', 'Ripple', 'Litecoin', 'BitShares', 'Dogecoin', 'Nxt', 'Peercoin', 'Stellar', 'Counterparty', 'Darkcoin']
+</code></pre>
+
+<ul>
 <li>Mineable:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.mineable('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.mineable('bitcoin')
 true
 </code></pre>
 
 <ul>
 <li>Premined:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.premined('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.premined('bitcoin')
 false
 </code></pre>
 
 <ul>
 <li>Coin summary:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.coin_summary('bitcoin')
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.coin_summary('bitcoin')
 {
     "cap_change_1h": "0.17 %",
     "premine": false 
@@ -149,24 +183,30 @@ false
 
 <ul>
 <li>Last update:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.last_updated()
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.last_updated()
 Last updated: Aug 03, 2014  9:05 AM UTC
 </code></pre>
 
 <ul>
 <li>Total market capitalization:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.total_market_cap()
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.total_market_cap()
 Total Market Cap: $ 8,191,266,103
 </code></pre>
 
 <ul>
 <li>Coinmarketcap stats:</li>
-</ul><pre><code>&gt;&gt;&gt; coinmarketcap.stats()
+</ul>
+
+<pre><code>&gt;&gt;&gt; coinmarketcap.stats()
 501 Currencies / 1532 Markets / 28 Assets
 </code></pre>
 
 <h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License:</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
 
 <pre><code>  Apache v2.0 License
   Copyright 2014 Martin Simon
@@ -186,7 +226,7 @@ Total Market Cap: $ 8,191,266,103
 </code></pre>
 
 <h2>
-<a name="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
+<a id="buy-me-a-coffee" class="anchor" href="#buy-me-a-coffee" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy me a coffee?</h2>
 
 <p>If you feel like buying me a coffee (or a beer?), donations are welcome:</p>
 
